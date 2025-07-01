@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Kadai2 {
     public static void main(String[] args) {
@@ -23,15 +24,16 @@ public class Kadai2 {
                 )
         );
         String line;
-        while ((line = br.readLine()) != null) {
-           // System.out.println(line);
-        }
-
         ArrayList<String> list = new ArrayList<>();
-        list.add("title");
-        list.add("author");
-        list.add("loanDate");
-        list.add("returnDate");
+        while ((line = br.readLine()) != null) {
+            list.add(line);
+        }
         return list;
     }
+
+    private static ArrayList<Book> parseToBookList(ArrayList<String> readLine){
+        
+    }
+
+
 }

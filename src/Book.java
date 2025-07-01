@@ -9,4 +9,14 @@ public class Book {
     private String returnDate;
     /** 本の価格 */
     private int price;
+
+    Book (String title,String author,String loanDate,String returnDate,int price){
+        this.title = title;
+        this.author = author;
+        this.loanDate = loanDate;
+        this.returnDate = returnDate;
+        this.price = price;
+    }
+
+
 }
