@@ -13,7 +13,7 @@ public class Kadai2 {
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }ArrayList<Book> booklist = parseToBookList(list);
     }
 
     private static ArrayList<String> fileRead(String filePath) throws IOException {
@@ -32,7 +32,13 @@ public class Kadai2 {
     }
 
     private static ArrayList<Book> parseToBookList(ArrayList<String> readLine){
-        
+      for (String s : readLine) {
+          String str = "";
+          String[] split = s.split (",");
+          
+          Book book = new Book();
+      }
+        return parseToBookList();
     }
 
 
