@@ -7,13 +7,13 @@ public class Kadai2 {
     public static void main(String[] args) {
         try {
             ArrayList<String> readLines = fileRead("src/BookInfo.csv");
-
-            for (String s : readLines) {
-                System.out.println(s);
-            }
+            ArrayList<Book> booklist = parseToBookList(readLines);
+//            for (String s : readLines) {
+//                System.out.println(s);
+//            }
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }ArrayList<Book> booklist = parseToBookList(list);
+        }
     }
 
     private static ArrayList<String> fileRead(String filePath) throws IOException {
@@ -32,12 +32,13 @@ public class Kadai2 {
     }
 
     private static ArrayList<Book> parseToBookList(ArrayList<String> readLine){
-      for (String s : readLine) {
-          String str = "";
-          String[] split = s.split (",");
-          
-          Book book = new Book();
-      }
+        for (String s : readLine) {
+            String str = "";
+            String[] split = s.split (",");
+
+            Book book = new Book(split[0],split[1],split[2],split[3],Integer.parseInt(split[4]));
+
+        }
         return parseToBookList();
     }
 
