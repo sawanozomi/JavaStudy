@@ -1,16 +1,15 @@
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Kadai2 {
     public static void main(String[] args) {
         try {
             ArrayList<String> readLines = fileRead("src/BookInfo.csv");
             ArrayList<Book> booklist = parseToBookList(readLines);
-//            for (String s : readLines) {
-//                System.out.println(s);
-//            }
+            for (Book book : booklist) {
+                System.out.println(book.getTitle());
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -32,15 +31,19 @@ public class Kadai2 {
     }
 
     private static ArrayList<Book> parseToBookList(ArrayList<String> readLine){
+
+        ArrayList<Book> list = new ArrayList<>();
         for (String s : readLine) {
-            String str = "";
             String[] split = s.split (",");
 
             Book book = new Book(split[0],split[1],split[2],split[3],Integer.parseInt(split[4]));
 
+            list.add(book);
+
         }
-        return parseToBookList();
+        return list;
     }
 
+    private static void displyBookInfo(ArrayList<Book> bookList)
 
 }
