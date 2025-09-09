@@ -44,9 +44,8 @@ public class Kadai2 {
 
     private static void displayBookInfo(ArrayList<Book> bookList) {
         for (Book book : bookList) {
-
             System.out.printf("[%s][%s][%s][%s][%s]%n",book.getTitle(),book.getAuthor(),book.getLoanDate(),book.getReturnDate(),book.getPrice());
-            
+
         }
     }
 }
