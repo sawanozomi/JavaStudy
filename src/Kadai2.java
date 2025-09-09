@@ -7,9 +7,7 @@ public class Kadai2 {
         try {
             ArrayList<String> readLines = fileRead("src/BookInfo.csv");
             ArrayList<Book> booklist = parseToBookList(readLines);
-            for (Book book : booklist) {
-                System.out.println(book.getTitle());
-            }
+            displayBookInfo(booklist);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -44,6 +42,11 @@ public class Kadai2 {
         return list;
     }
 
-    private static void displyBookInfo(ArrayList<Book> bookList)
+    private static void displayBookInfo(ArrayList<Book> bookList) {
+        for (Book book : bookList) {
 
+            System.out.printf("[%s][%s][%s][%s][%s]%n",book.getTitle(),book.getAuthor(),book.getLoanDate(),book.getReturnDate(),book.getPrice());
+            
+        }
+    }
 }

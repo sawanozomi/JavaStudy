@@ -21,4 +21,8 @@ public class Book {
     public String getTitle() {
         return title;
     }
+    public String getAuthor(){return author;}
+    public String getLoanDate() {return loanDate;}
+    public String getReturnDate() {return returnDate;}
+    public int getPrice(){return price;}
 }
